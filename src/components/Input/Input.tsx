@@ -7,7 +7,7 @@ export const Input = () => {
     console.log(todo)
 
     const handleShowCards = () => {
-        setShowCards(true)
+        setShowCards(!showCards)
     };
 
     return (
@@ -24,6 +24,7 @@ export const Input = () => {
                 onClick={(e) => {
                     handleShowCards();
                 }}
+                data-testid='btnAdd'
             >
                 ADD
             </button>

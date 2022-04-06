@@ -5,7 +5,7 @@ interface CardsProps {
     showCards?: boolean;
 }
 
-export const Cards: FC<CardsProps> = (todo, showCards) => {
+export const Cards: FC<CardsProps> = ({todo, showCards}) => {
 console.log(showCards)
     return (
         <div>
