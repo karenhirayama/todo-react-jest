@@ -1,10 +1,10 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Input } from './Input';
 
 describe("Input Component", () => {
-    it("Rendered Input", () => {
-        const { getByTestId }: any = render(<Input />);
-        const input = getByTestId('inputTodo');
+    test("Rendered Input", () => {
+        render(<Input />);
+        const input = screen.getByTestId('inputTodo');
         expect(input).toBeTruthy();
     })
-})
+  })

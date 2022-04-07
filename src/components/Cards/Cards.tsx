@@ -6,12 +6,12 @@ interface CardsProps {
 }
 
 export const Cards: FC<CardsProps> = ({todo, showCards}) => {
-console.log(showCards)
+
     return (
         <div>
             {showCards &&
                 <>
-                    cards here
+                    {todo}
                 </>
             }
         </div>

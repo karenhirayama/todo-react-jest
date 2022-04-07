@@ -4,7 +4,6 @@ import { Cards } from '../Cards/Cards';
 export const Input = () => {
     const [todo, setTodo] = useState('');
     const [showCards, setShowCards] = useState(false);
-    console.log(todo)
 
     const handleShowCards = () => {
         setShowCards(!showCards)
