@@ -7,11 +7,11 @@ describe("Input Component", () => {
         const input = screen.getByTestId('inputTodo');
         expect(input).toBeTruthy();
     });
-
+    
     it("Get input change", () => {
         render(<Input/>);
         const input = screen.getByTestId('inputTodo');
         const wordInputTest = 'Word Input';
         fireEvent.change(input, {target: {value: wordInputTest}})
-    })
+    });
   })
