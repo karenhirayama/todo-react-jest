@@ -15,4 +15,12 @@ describe("Input Component", () => {
         const wordInputTest = 'Word Input';
         fireEvent.change(input, {target: {value: wordInputTest}})
     });
+
+    test("Listen button input", () => {
+        render(<Input />);
+        const btnAdd = screen.getByTestId('btnAdd');
+        fireEvent.click(btnAdd);
+        expect(btnAdd).toBeTruthy();
+    });
+
   })
