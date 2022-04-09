@@ -1,14 +1,15 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import { createRenderer } from 'react-dom/test-utils';
 import { Input } from './Input';
 
 describe("Input Component", () => {
-    it("Rendered Input", () => {
+    test("Rendered Input", () => {
         render(<Input />);
         const input = screen.getByTestId('inputTodo');
         expect(input).toBeTruthy();
     });
     
-    it("Get input change", () => {
+    test("Get input change", () => {
         render(<Input/>);
         const input = screen.getByTestId('inputTodo');
         const wordInputTest = 'Word Input';
