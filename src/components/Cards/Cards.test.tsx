@@ -3,6 +3,8 @@ import { Cards } from './Cards';
 
 describe("Cards content", () => {
     test("Render Cards", () => {
-        render(<Cards todo={'yes'} showCards={true} />)
+        render(<Cards todo={'yes'} showCards={true} />);
+        const cards = screen.getByTestId('cardsId');
+        expect(cards).toBeTruthy();
     });
 })
