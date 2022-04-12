@@ -9,15 +9,21 @@ describe("Cards content", () => {
     });
 
 
-    test("Render todo", () => {
+    test("Render todo container", () => {
         render(<Cards todo={'yes'} showCards={true} />);
         const div = screen.getByTestId('todoContainer');
         expect(div).toBeTruthy();
     });
 
-    test("Not render todo", () => {
+    test("Not render todo container", () => {
         render(<Cards todo={'yes'} showCards={false} />);
         const div = screen.queryByTestId('todoContainer');
         expect(div).toBeFalsy();
+    });
+
+    test("Render todo", () => {
+        render(<Cards todo={'yes'} showCards={true} />);
+        const todoText = screen.getByText('yes');
+        expect(todoText).toBeInTheDocument();
     });
 })
