@@ -7,4 +7,17 @@ describe("Cards content", () => {
         const cards = screen.getByTestId('cardsId');
         expect(cards).toBeTruthy();
     });
+
+
+    test("Render todo", () => {
+        render(<Cards todo={'yes'} showCards={true} />);
+        const div = screen.getByTestId('todoContainer');
+        expect(div).toBeTruthy();
+    });
+
+    test("Not render todo", () => {
+        render(<Cards todo={'yes'} showCards={false} />);
+        const div = screen.queryByTestId('todoContainer');
+        expect(div).toBeFalsy();
+    });
 })

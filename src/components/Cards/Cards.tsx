@@ -12,9 +12,11 @@ export const Cards: FC<CardsProps> = ({todo, showCards}) => {
         data-testid='cardsId'
         >
             {showCards &&
-                <>
+                <div
+                data-testid='todoContainer'
+                >
                     {todo}
-                </>
+                </div>
             }
         </div>
     )
